@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>My Portfolio</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',sans-serif;color:#333;scroll-behavior:smooth}
+nav{position:fixed;top:0;width:100%;background:#1a1a2e;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;z-index:100}
+nav .logo{color:#e94560;font-size:1.5rem;font-weight:bold}
+nav ul{list-style:none;display:flex;gap:2rem}
+nav ul a{color:#fff;text-decoration:none;transition:.3s}
+nav ul a:hover{color:#e94560}
+.hero{height:100vh;background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);display:flex;align-items:center;justify-content:center;text-align:center;color:#fff}
+.hero h1{font-size:3.5rem;margin-bottom:1rem}.hero h1 span{color:#e94560}
+.hero p{font-size:1.2rem;margin-bottom:2rem;opacity:.8}
+.btn{background:#e94560;color:#fff;padding:.8rem 2rem;border:none;border-radius:25px;font-size:1rem;cursor:pointer;text-decoration:none;transition:.3s}
+.btn:hover{background:#c73652;transform:translateY(-2px)}
+section{padding:5rem 2rem}
+.container{max-width:1100px;margin:0 auto}
+h2.section-title{text-align:center;font-size:2.5rem;margin-bottom:3rem;color:#1a1a2e}
+h2.section-title span{color:#e94560}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.5rem}
+.skill-card{background:#fff;border-radius:10px;padding:1.5rem;text-align:center;box-shadow:0 5px 15px rgba(0,0,0,.1);transition:.3s}
+.skill-card:hover{transform:translateY(-5px);box-shadow:0 10px 25px rgba(0,0,0,.2)}
+.skill-icon{font-size:2.5rem;margin-bottom:.5rem}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem}
+.project-card{background:#fff;border-radius:15px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,.1);transition:.3s}
+.project-card:hover{transform:translateY(-5px)}
+.project-img{height:200px;background:linear-gradient(135deg,#e94560,#0f3460);display:flex;align-items:center;justify-content:center;font-size:4rem}
+.project-info{padding:1.5rem}
+.project-info h3{margin-bottom:.5rem;color:#1a1a2e}
+.project-info p{color:#666;font-size:.9rem;margin-bottom:1rem}
+.tag{background:#e9456022;color:#e94560;padding:.2rem .7rem;border-radius:20px;font-size:.8rem;margin-right:.3rem}
+#about{background:#f9f9f9}
+.about-content{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.about-text p{font-size:1.1rem;line-height:1.8;color:#555;margin-bottom:1rem}
+.contact-form{max-width:600px;margin:0 auto}
+.form-group{margin-bottom:1.5rem}
+.form-group input,.form-group textarea{width:100%;padding:1rem;border:2px solid #eee;border-radius:8px;font-size:1rem;transition:.3s}
+.form-group input:focus,.form-group textarea:focus{border-color:#e94560;outline:none}
+.form-group textarea{height:150px;resize:vertical}
+footer{background:#1a1a2e;color:#fff;text-align:center;padding:2rem}
+footer span{color:#e94560}
+@media(max-width:768px){.hero h1{font-size:2.5rem}.about-content{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">&lt;Dev/&gt;</div>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+<section class="hero" id="home">
+  <div>
+    <h1>Hi, I'm <span>John Doe</span></h1>
+    <p>Full Stack Developer | Problem Solver | Code Enthusiast</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </div>
+</section>
+<section id="about">
+  <div class="container">
+    <h2 class="section-title">About <span>Me</span></h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>I'm a passionate full-stack developer with 3+ years of experience building web applications that are fast, accessible, and visually appealing.</p>
+        <p>I love turning complex problems into simple, beautiful solutions. When I'm not coding, you'll find me exploring new technologies or contributing to open-source.</p>
+        <a href="#contact" class="btn">Get In Touch</a>
+      </div>
+      <div style="background:linear-gradient(135deg,#e94560,#0f3460);border-radius:20px;height:300px;display:flex;align-items:center;justify-content:center;font-size:5rem">👨‍💻</div>
+    </div>
+  </div>
+</section>
+<section id="skills">
+  <div class="container">
+    <h2 class="section-title">My <span>Skills</span></h2>
+    <div class="skills-grid">
+      <div class="skill-card"><div class="skill-icon">⚛️</div><strong>React</strong></div>
+      <div class="skill-card"><div class="skill-icon">🟨</div><strong>JavaScript</strong></div>
+      <div class="skill-card"><div class="skill-icon">🐍</div><strong>Python</strong></div>
+      <div class="skill-card"><div class="skill-icon">☕</div><strong>Java</strong></div>
+      <div class="skill-card"><div class="skill-icon">🗄️</div><strong>SQL</strong></div>
+      <div class="skill-card"><div class="skill-icon">🐙</div><strong>Git</strong></div>
+    </div>
+  </div>
+</section>
+<section id="projects">
+  <div class="container">
+    <h2 class="section-title">My <span>Projects</span></h2>
+    <div class="projects-grid">
+      <div class="project-card"><div class="project-img">🛒</div><div class="project-info"><h3>E-Commerce App</h3><p>Full stack shopping app with cart, auth, and payments.</p><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">MongoDB</span></div></div>
+      <div class="project-card"><div class="project-img">📊</div><div class="project-info"><h3>Analytics Dashboard</h3><p>Real-time data visualization dashboard.</p><span class="tag">Python</span><span class="tag">D3.js</span><span class="tag">Flask</span></div></div>
+      <div class="project-card"><div class="project-img">💬</div><div class="project-info"><h3>Chat Application</h3><p>Real-time chat app with rooms and file sharing.</p><span class="tag">Socket.io</span><span class="tag">Node.js</span><span class="tag">React</span></div></div>
+    </div>
+  </div>
+</section>
+<section id="contact" style="background:#f9f9f9">
+  <div class="container">
+    <h2 class="section-title">Contact <span>Me</span></h2>
+    <div class="contact-form">
+      <div class="form-group"><input type="text" placeholder="Your Name"/></div>
+      <div class="form-group"><input type="email" placeholder="Your Email"/></div>
+      <div class="form-group"><textarea placeholder="Your Message"></textarea></div>
+      <button class="btn" style="width:100%">Send Message</button>
+    </div>
+  </div>
+</section>
+<footer><p>Made with ❤️ by <span>John Doe</span> &copy; 2026</p></footer>
+</body>
+</html>
